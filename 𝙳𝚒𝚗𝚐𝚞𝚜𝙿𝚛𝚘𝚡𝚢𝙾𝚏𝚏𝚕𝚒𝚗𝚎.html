@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
         <style>
-                  .link-button {
+        .link-button {
         position: absolute;
         top: 25px;
         right: 348px;
@@ -600,7 +600,7 @@ max-height: 91%;
       .fade-in {
         opacity: 1;
       }
-        </style>
+</style>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
@@ -1083,9 +1083,7 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
   
 
     <div id="blur-background" class="blur-background"></div>
-<script>
-
-  
+    <script>
   const messages = [
     "𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣",
     "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
@@ -1343,70 +1341,6 @@ document.getElementById('button3').addEventListener('click', renderWebsite);
   document.getElementById('button3').addEventListener('click', renderWebsite);
 
 
-  function fixRelativeUrls(content, baseUrl) {
-    content.querySelectorAll("a").forEach((el) => {
-      const relativeUrl = el.getAttribute("href");
-      if (relativeUrl && !relativeUrl.startsWith("http")) {
-        const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-        el.setAttribute("href", absoluteUrl);
-      }
-      el.addEventListener("click", function(event) {
-        event.preventDefault();
-        const urlInput = document.getElementById("url");
-        urlInput.value = el.href;
-        renderWebsite();
-      });
-    });
-    content.querySelectorAll("img").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("script").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("link").forEach((el) => {
-      fixElementSrc(el, "href", baseUrl);
-    });
-    content.querySelectorAll("iframe").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video source, audio source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("audio").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("object").forEach((el) => {
-      fixElementSrc(el, "data", baseUrl);
-      el.querySelectorAll("param").forEach((paramEl) => {
-        const relativeUrl = paramEl.getAttribute("value");
-        if (relativeUrl && !relativeUrl.startsWith("http")) {
-          const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-          paramEl.setAttribute("value", absoluteUrl);
-        }
-      });
-    });
-    content.querySelectorAll("audio source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("track").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-  }
-
-  function fixElementSrc(el, attributeName, baseUrl) {
-    const relativeUrl = el.getAttribute(attributeName);
-    if (relativeUrl && !relativeUrl.startsWith("http")) {
-      const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-      el.setAttribute(attributeName, absoluteUrl);
-    }
-  }
-
 
   function togglePopup(popupId) {
     const popup = document.getElementById(popupId);
@@ -1533,7 +1467,7 @@ var downloadButton = document.querySelector('#downloadButton');
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-</script>
+    </script>
     <script> 
 function hashString(str) {
     let hash = 0, i, chr;
