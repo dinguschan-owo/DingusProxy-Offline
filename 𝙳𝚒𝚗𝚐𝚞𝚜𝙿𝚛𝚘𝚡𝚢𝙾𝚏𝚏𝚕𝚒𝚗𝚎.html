@@ -1,21 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
         <style>
-        .link-button {
+                  .link-button {
         position: absolute;
         top: 25px;
         right: 348px;
         width: 40px;
-        height: 38px;
+        height: 36px;
         border: none;
         border-radius: 9px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
         color: #f0f0f0;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -65,20 +64,23 @@
                           border: 2px solid #fff;
         }
         .rename-input {
-            padding-right: 8px;
-            padding-right: 8px;
-            padding-top: 10px;
-            margin-top: 6px;
-            padding-bottom: 11px;
+padding: 10px 12px 10px 12px; 
+          width: 520px !important; 
+          border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
             margin-right: 5px;
                       outline: none;
           width: 523px;
           border-radius: 8px;
-          outline: none; !important
-          border: 2px solid #fff;
-          margin-bottom: 5px;
+          outline: none !important; 
+          margin-bottom: 0px;
           background-color: #fff;
+          color: #bfbfbf;
         }
+
+        .rename-input:focus::placeholder {
+          opacity: 0.1; 
+        }
+
         .rename-button {
             padding: 0px 0px;
             margin: 5px;
@@ -86,7 +88,7 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            background-color: #000; !important
+            background-color: #000; 
             border: 1px solid #ccc;
             border-radius: 9px;
             outline: none;
@@ -232,9 +234,9 @@
         height: 1000%;
         background: linear-gradient(135deg, #2e2c3a, #383352);
         z-index: -100;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        outline: none;
+        overflow-x: hidden !important; 
+        overflow-y: hidden !important;
+        outline: none !important;
       }
 
     .popup-content {
@@ -355,50 +357,68 @@ max-height: 100%;
       h9 {
         font-size: 16px;
         color: #ffffff;
-        text-align: center; !important
+        text-align: center !important; 
         outline: none;
       }
 
       .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
+                margin-bottom: 20px;
       }
 
       .input-group input[type="text"] {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
         z-index: 100;
         margin-top: 7px;
+        font-size: 16px;
+        margin-bottom: 1px;
       }
+
+::placeholder {
+  color: #bfbfbf;
+  opacity: 1; /* Firefox */
+}
+
+      .input-group input[type="text"]:focus::placeholder {
+  opacity: .1; /* Firefox */
+                padding-top: 20px !important;
+                        padding-bottom: 20px !important;
+        height: 50px !important;
+        font-size: 15px;
+}
+
+
 
       .input-group input[type="text"]:focus {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
          transition: margin-top 0.5s;
       }
       
             .input-group input[type="text"]:active {
-        outline:none; !important
+        outline:none !important; 
                       z-index: 100;
       }
       
@@ -580,7 +600,7 @@ max-height: 91%;
       .fade-in {
         opacity: 1;
       }
-</style>
+        </style>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
@@ -611,7 +631,7 @@ max-height: 91%;
     <button class="que-button" onclick="togglePopup('popup')">
 &nbsp&nbsp？
     </button>&nbsp&nbsp
-    <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
+    <input type="text" id="url" placeholder="𝙴𝚗𝚝𝚎𝚛 𝚄𝚁𝙻 (𝚑𝚝𝚝𝚙𝚜://)">&nbsp&nbsp
        <button onclick="shrinkContainerAndRender()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
     <button onclick="openInBlankTab()">𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
   <button onclick="createBlobUrl()">𝚋𝚕𝚘𝚋:</button>
@@ -924,8 +944,8 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
         </span>
   </div><br>
     <div class="popup-content">
-    <input type="text" id="pageTitleInput" placeholder="  Enter new page title :D" class="rename-input">
-    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button>
+    <input type="text" id="pageTitleInput" placeholder="𝙴𝚗𝚝𝚎𝚛 𝚗𝚎𝚠 𝚙𝚊𝚐𝚎 𝚝𝚒𝚝𝚕𝚎 :D" class="rename-input">
+    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button><br><br>
 
 
     <!-- Buttons with favicons -->
@@ -1063,8 +1083,9 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
   
 
     <div id="blur-background" class="blur-background"></div>
-    <script>
-      
+<script>
+
+  
   const messages = [
     "𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣",
     "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
@@ -1114,30 +1135,105 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
   setInterval(changeMessage, 5000);
 
   // Using sessionStorage for client-side caching
-  function renderWebsite() {
-      const urlInput = document.getElementById("url");
-      let url = urlInput.value.trim();
-      if (!url.startsWith("http://") && !url.startsWith("https://")) {
-          url = "https://" + url;
-          urlInput.value = url;
-      }
+// Function to render the website content within a Shadow DOM
+function renderWebsite() {
+    const urlInput = document.getElementById("url");
+    let url = urlInput.value.trim();
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+        urlInput.value = url;
+    }
 
-      const renderedContent = document.getElementById("rendered-content");
-      const loadingSpinner = document.getElementById("loading-spinner");
+    const renderedContent = document.getElementById("rendered-content");
+    const loadingSpinner = document.getElementById("loading-spinner");
 
-      const cachedContent = sessionStorage.getItem(url);
-      if (cachedContent) {
-          renderedContent.innerHTML = cachedContent;
-          loadingSpinner.style.display = "none";
-          fixRelativeUrls(renderedContent, url);
-          return; // Exit early if content is cached
-      }
+    const cachedContent = sessionStorage.getItem(url);
+    if (cachedContent) {
+        displayInShadowDOM(renderedContent, cachedContent);
+        loadingSpinner.style.display = "none";
+        return; // Exit early if content is cached
+    }
 
-      renderedContent.innerHTML = "";
-      loadingSpinner.style.display = "block";
+    renderedContent.innerHTML = "";
+    loadingSpinner.style.display = "block";
 
-      fetchAndRender(url, renderedContent, loadingSpinner);
-  }
+    fetchAndRender(url, renderedContent, loadingSpinner);
+}
+
+// Function to fetch content and render it in a Shadow DOM
+function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
+    fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then((data) => {
+            // Cache the fetched content
+            sessionStorage.setItem(url, data);
+
+            // Render the content in a Shadow DOM
+            displayInShadowDOM(renderedContent, data);
+            loadingSpinner.style.display = "none";
+        })
+        .catch((error) => {
+            if (retryCount > 0) {
+                const delay = 1000 * Math.pow(2, 3 - retryCount);
+                setTimeout(() => {
+                    fetchAndRender(url, renderedContent, loadingSpinner, retryCount - 1);
+                }, delay);
+            } else {
+                renderedContent.innerHTML = `
+                    <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
+                loadingSpinner.style.display = "none";
+            }
+        });
+}
+
+// Function to create a Shadow DOM and insert the content
+function displayInShadowDOM(renderedContent, htmlContent) {
+    // Create a shadow root
+    const shadowRoot = renderedContent.attachShadow({ mode: 'open' });
+
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Styles to ensure content stays within the rendered-content div */
+        :host {
+            display: block;
+            overflow: auto;
+            max-width: 100%;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+
+        :host > * {
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+            box-sizing: border-box;
+        }
+    `;
+
+    // Insert the fetched HTML content into the shadow DOM
+    shadowRoot.innerHTML = htmlContent;
+
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+}
+
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Add any global styles needed for the shadow DOM here */
+    `;
+
+// Event listeners for buttons (e.g., fetch content)
+document.getElementById('button1').addEventListener('click', renderWebsite);
+document.getElementById('button2').addEventListener('click', renderWebsite);
+document.getElementById('button3').addEventListener('click', renderWebsite);
+
 
   function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
       fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
@@ -1437,7 +1533,7 @@ var downloadButton = document.querySelector('#downloadButton');
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-      </script>
+</script>
     <script> 
 function hashString(str) {
     let hash = 0, i, chr;
@@ -1535,7 +1631,7 @@ window.onload = function() {
     
     <script>
         document.getElementById('downloadButton').addEventListener('click', function() {
-    fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/%F0%9D%99%B3%F0%9D%9A%92%F0%9D%9A%97%F0%9D%9A%90%F0%9D%9A%9E%F0%9D%9A%9C%F0%9D%99%BF%F0%9D%9A%9B%F0%9D%9A%98%F0%9D%9A%A1%F0%9D%9A%A2%F0%9D%99%BE%F0%9D%9A%8F%F0%9D%9A%8F%F0%9D%9A%95%F0%9D%9A%92%F0%9D%9A%97%F0%9D%9A%8E.html?token=GHSAT0AAAAAACUS64YXO2UBQEBKRR6X7CC6ZVSTA6Q')
+    fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
         .then(response => response.text())
         .then(data => {
             const blob = new Blob([data], { type: 'text/html' });
